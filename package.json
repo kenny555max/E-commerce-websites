@@ -1,0 +1,14 @@
+{
+  "name": "fashi-duplicate",
+  "version": "1.0.0",
+  "description": "E-commerce Website",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "author": "Oyedepo Oyediran Kehinde adam",
+  "license": "MIT",
+  "dependencies": {
+    "node-sass": "^6.0.1"
+  }
+}
