@@ -1,4 +1,8 @@
-body{
-    background-color: red;
-    color: red;
-}
+@import '__includes/__config';
+@import '__includes/__header';
+@import '__includes/_banner';
+@import '__includes/_content';
+@import '__includes/_footer';
+@import '__includes/_blog-content';
+@import '__includes/_cart';
+@import '__includes/_shop-content';

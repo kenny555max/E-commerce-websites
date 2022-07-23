@@ -1,0 +1,281 @@
+.bottom-header{
+    background-color: $secondary-color;
+
+    .departments-links{
+        background-color: rgba($color: $light-dark-color, $alpha: 0.7);
+        height: 50px;
+        position: relative;
+        cursor: pointer;
+
+
+        &:hover{
+            ul{
+                &#depts{
+                    visibility: visible;
+                    opacity: 1;
+                    top: 50px;
+                    z-index: 9;
+                }
+            }
+        }
+
+        .fa{
+            font-size: 1rem;
+        }
+
+        h6{
+            font-size: 0.8rem;
+            margin-top: 7px;
+            font-weight: 600;
+            font-family: sans-serif;
+        }
+    }
+
+
+    ul{
+        &#depts{
+            list-style: none;
+            padding: 0 0;
+            top: 100px;
+            background-color: $touch-color;
+            box-shadow: 0 0 10px 5px rgba($color: $light-dark-color, $alpha: 0.2);
+            width: 100%;
+            left: 0;
+            visibility: hidden;
+            opacity: 0;
+            @include easeOut;
+            
+
+            li{
+                a{
+                    color: $secondary-color;
+                    text-decoration: none;
+                    @include easeOut;
+                    font-weight: 400;
+
+                    &:hover{
+                        color: $primary-color;
+                    }
+
+                    &.active{
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+
+        &#port-links{
+            display: flex;
+            list-style: none;
+            padding: 0 0;
+            z-index: 1;
+
+            li{
+                position: relative;
+
+                
+                &.active{
+                    background-color: $primary-color;
+                }
+
+                &:hover{
+                    background-color: $primary-color;
+                    
+                    ul#dropdown-menu{
+                        visibility: visible;
+                        opacity: 1;
+                        top: 48px;
+                    }
+                }
+
+
+                a{
+                    color: $touch-color;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    @include easeOut;
+                    font-weight: 700;
+                    font-size: 0.8rem;
+                    font-family: sans-serif;
+                    padding: 15px 40px;
+                    border-right: 1px solid $light-dark-color;
+                }
+            }
+        }
+
+
+        &#dropdown-menu{
+            position: absolute;
+            background-color: $secondary-color;
+            padding: 0 0;
+            list-style: none;
+            width: 200px;
+            top: 100px;
+            z-index: 9;
+            visibility: hidden;
+            opacity: 0;
+            @include easeOut;
+            right: 0px;
+
+
+            li{
+
+                &:hover{
+                    background-color: $secondary-color;
+                    color: $primary-color;
+                }
+
+
+                a{
+                    text-transform: initial;
+                    @include easeOut;
+                    font-size: 0.8rem;
+
+                    &:hover{
+                        background-color: $secondary-color;
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include mediaMd{
+    .bottom-header{
+        ul{
+            &#port-links{
+                li{
+                    &:hover{
+                        ul#dropdown-menu{
+                            top: 35px;
+                        }
+                    }
+
+                    a{
+                        font-size: 0.7rem;
+                        padding: 10px 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@include mediaSm{
+    .bottom-header{
+        background-color: $touch-color;
+
+        .departments-links{
+            display: none !important;
+        }
+
+        .info-list{
+            position: relative;
+        }
+
+        ul{
+            &#port-links{
+                z-index: 9;
+                display: block;
+                left: 0;
+                background-color: $secondary-color;
+                transition-property: none;
+                display: none;
+
+                li{
+                    border-right: 0;
+
+                    &.active{
+                        background-color: $secondary-color;
+                    }
+
+                    &:hover{
+                        background-color: $secondary-color;
+                    }
+
+                    a{
+                        border-right: 0;
+                    }
+                }
+            }
+
+            &#dropdown-menu{
+                position: static;
+                visibility: visible;
+                opacity: 1;
+                margin-left: 40px;
+                width: inherit;
+                transition-property: none;
+                display: none;
+                
+
+                li{
+                    a{
+                        color: $touch-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@include mediaXs{
+    .bottom-header{
+        background-color: $touch-color;
+
+        .departments-links{
+            display: none !important;
+        }
+
+        .info-list{
+            position: relative;
+        }
+
+        ul{
+            &#port-links{
+                z-index: 9;
+                display: block;
+                left: 0;
+                background-color: $secondary-color;
+                transition-property: none;
+                display: none;
+
+                li{
+                    border-right: 0;
+
+                    &.active{
+                        background-color: $secondary-color;
+                    }
+
+                    &:hover{
+                        background-color: $secondary-color;
+                    }
+
+                    a{
+                        border-right: 0;
+                    }
+                }
+            }
+
+            &#dropdown-menu{
+                position: static;
+                visibility: visible;
+                opacity: 1;
+                margin-left: 40px;
+                width: inherit;
+                transition-property: none;
+                display: none;
+                
+
+                li{
+                    a{
+                        color: $touch-color;
+                    }
+                }
+            }
+        }
+    }
+}

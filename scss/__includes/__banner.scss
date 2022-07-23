@@ -1,0 +1,209 @@
+main.banner{
+    margin-top: -15px;
+
+    .owl-item.active .banner-image .banner-text small{
+        top: 30%;
+        opacity: 1;
+    }
+
+    .owl-item.active .banner-image .banner-text h1{
+        top: 35%;
+        opacity: 1;
+    }
+
+    .owl-item.active .banner-image .banner-text p{
+        top: 47%;
+        opacity: 1;
+    }
+
+    .owl-item.active .banner-image .banner-text button{
+        top: 58%;
+        opacity: 1;
+    }
+
+    .owl-item.active .banner-image .banner-text .price-tag{
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+
+
+    .owl-nav button[type=button] {
+        font-size: 30px;
+        position: absolute;
+        bottom: -50px;
+        background-color: $light-dark-color;
+        color: $primary-color;
+        font-size: 2rem;
+        width: 30px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .owl-nav button[type=button].owl-prev {
+        right: 50px;
+    }
+
+    .owl-nav button[type=button].owl-next {
+        right: 10px;
+    }
+
+
+    .banner-image{
+        height: 700px;
+        @include background;
+        position: relative;
+
+        .banner-text{
+            font-family: sans-serif;
+
+            small,
+            h1,
+            button{
+                text-transform: uppercase;
+            }
+
+            small,
+            h1,
+            button,
+            p,
+            .price-tag{
+                position: absolute;
+                opacity: 0;
+            }
+
+            small{
+                top: 40%;
+                color: $primary-color;
+                transition: all 0.5s 0.1s ease-in-out;
+            }
+
+            h1{
+                top: 45%;
+                transition: all 0.5s 0.2s ease-in-out;
+                font-family: sans-serif;
+                font-weight: bolder;
+                font-size: 4rem;
+            }
+
+            p{
+                top: 57%;
+                transition: all 0.5s 0.3s ease-in-out;
+                width: 400px;
+            }
+
+            button{
+                background-color: $primary-color;
+                color: $touch-color;
+                transition: all 0.5s 0.4s ease-in-out;
+                font-weight: bold;
+                top: 65%;
+                padding: 10px 30px;
+            }
+
+            .price-tag{
+                right: 20%;
+                top: 10%;
+                width: 160px;
+                height: 160px;
+                transform: rotate(180deg);
+                border-radius: 100%;
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+                background-color: $primary-color;
+                transition: all 1s 0.7s ease-in-out;
+
+
+                &::after{
+                    content: "";
+                    position: absolute;
+                    width: 150px;
+                    height: 150px;
+                    border: 3px dashed $touch-color;
+                    border-radius: 100%;
+                }
+
+                h2{
+                    font-size: 2.2rem;
+                    color: $touch-color;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                }
+            }
+
+        }
+    }
+}
+
+
+@include mediaSm{
+    .banner{
+        .owl-item.active .banner-image .container .banner-text h1{
+            top: 33%;
+        }
+    
+        .owl-item.active .banner-image .container .banner-text p{
+            top: 40%;
+        }
+    
+        .owl-item.active .banner-image .container .banner-text button{
+            top: 52%;
+        }
+
+
+        .banner-image{
+            .container{
+                .banner-text{
+                    h1{
+                        font-size: 3rem;
+                    }
+
+                    .price-tag{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include mediaXs{
+    .banner{
+        .owl-item.active .banner-image .container .banner-text h1{
+            top: 33%;
+        }
+    
+        .owl-item.active .banner-image .container .banner-text p{
+            top: 40%;
+        }
+    
+        .owl-item.active .banner-image .container .banner-text button{
+            top: 52%;
+        }
+
+        
+        .banner-image{
+            .container{
+                .banner-text{
+                    padding-left: 40px;
+
+                    .price-tag{
+                        display: none;
+                    }
+
+                    h1{
+                        font-size: 2rem;
+                    }
+
+                    p{
+                        width: 300px;
+                    }
+                }
+            }
+        }
+    }
+}

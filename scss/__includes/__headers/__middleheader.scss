@@ -1,0 +1,182 @@
+.middle-header{
+    .container{
+        padding: 40px 0;
+
+        .products-info{
+            position: relative;
+
+            
+            .navigation-menu{
+                display: none;
+                cursor: pointer;
+
+                .menu-icon{
+                    color: $touch-color;
+                    font-weight: bolder;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100px;
+                    height: 40px;
+
+
+                    p{
+                        margin-top: 10px;
+                    }
+                }
+            }
+
+            .categories{
+                height: 50px;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+    
+                h5{
+                    padding: 0 30px;
+                    font-size: 1rem;
+                }
+    
+                form{
+                    input{
+                        border: 0;
+                        width: 300px;
+    
+                        &:focus{
+                            outline: none;
+                            border: none;
+                            box-shadow: none;
+                        }
+                    }
+    
+                    button{
+                        position: absolute;
+                        right: 0;
+                        padding: 11px 20px;
+                        top: 0;
+                        border-radius: 0;
+    
+                        &:hover{
+                            background-color: $primary-color;
+                        }
+    
+                        &:active{
+                            box-shadow: none;
+                        }
+    
+                        &:focus{
+                            box-shadow: none;
+                        }
+                    }
+                }
+            }
+            .cart-details{
+                .wishlist,
+                .cart{
+                    position: relative;
+    
+                    span{
+                        position: absolute;
+                        color: $touch-color;
+                        border-radius: 100%;
+                        width: 15px;
+                        height: 15px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 1rem;
+                        top: -5px;
+                        right: -5px;
+                        background-color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@include mediaMd{
+    .middle-header{
+        .container{
+            .categories{
+                width: 400px;
+
+                h5{
+                    padding: 0 10px;
+                }
+
+                form{
+                    input{
+                        width: 200px;
+                    }
+                }
+            }
+        }
+    }   
+}
+
+
+@include mediaSm{
+    .middle-header{
+        .container{
+            padding: 20px 20px;
+
+            .products-info{
+                flex-direction: column;
+                
+                .navigation-menu{
+                    display: block !important;
+                    z-index: 9;
+                    bottom: 0;
+                    right: 0;
+                }
+
+                .logo{
+                    text-align: center;
+                    margin-bottom: 20px;
+                }
+
+                .categories{
+                    margin-bottom: 20px;
+
+                    h5{
+                        padding: 0 5px;
+                    }
+                }
+            }
+        }
+    }   
+}
+
+
+@include mediaXs{
+    .middle-header{
+        .container{
+            padding: 20px 20px;
+
+            .products-info{
+                flex-direction: column;
+                
+                .navigation-menu{
+                    display: block !important;
+                    z-index: 9;
+                    bottom: 0;
+                    right: 0;
+                }
+
+                .logo{
+                    text-align: center;
+                    margin-bottom: 20px;
+                }
+
+                .categories{
+                    margin-bottom: 20px;
+
+                    h5{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

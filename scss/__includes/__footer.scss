@@ -1,0 +1,144 @@
+.footer{
+    .footer-header{
+        background-color: $light-dark-color;
+        padding: 30px 0;
+
+
+        .partner-logo{
+            .logo-carousel{
+
+                .owl-item{
+                    img{
+                        display: block;
+                        width: auto;
+                    }
+                }
+                .logo-item{
+                    display: table;
+
+                    .tablecell-inner{
+                        display: table-cell;
+                        height: 45px;
+                        vertical-align: middle;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-middle{
+        background-color: darken($light-dark-color, 20);
+        padding: 60px 0;
+        font-family: sans-serif;
+        color: $touch-color;
+        border-bottom: 1px solid $darken-grey;
+
+        .footer-details{
+            .first{
+                address{
+                    line-height: 2;
+                    margin-top: 20px;
+                    color: $darken-grey;
+                }
+
+                .social-links{
+                    ul{
+                        margin-top: 40px;
+                        li{
+                            width: 40px;
+                            height: 40px;
+                            background-color: darken($darken-grey, 40);
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            border-radius: 100%;
+                            margin: 0 10px;
+
+                            &:nth-child(1) {
+                                margin-left: 0;
+                            }
+
+                            a{
+                                color: $touch-color;
+                                text-decoration: none;
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .info,
+            .account{
+                line-height: 3;
+
+                h4{
+                    font-size: 1.2rem;
+                    font-weight: bolder;
+                }
+
+                ul{
+                    padding: 0 0;
+                    list-style: none;
+
+                    li{
+                        a{
+                            text-decoration: none;
+                            color: $darken-grey;
+                        }
+                    }
+                }
+            }
+
+            .newsletter{
+                h4{
+                    font-size: 1.2rem;
+                }
+
+                p{
+                    margin-top: 20px;
+                    color: $darken-grey;
+                }
+
+                form{
+                    input{
+                        background-color: darken($darken-grey, 40);
+                        border: 0;
+                        border-radius: 0;
+                        padding: 25px;
+                        width: 65%;
+
+                        
+                        &::placeholder{
+                            color: lighten($darken-grey, 10);
+                        }
+
+                        &:focus{
+                            box-shadow: none;
+                            border: none;
+                        }
+                    }
+
+                    button{
+                        width: 35%;
+                        border-radius: 0;
+                        font-weight: bolder;
+                        padding: 10px 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-bottom{
+        background-color: darken($light-dark-color, 20);
+        color: $darken-grey;
+        padding: 20px 0;
+
+        .footer-logo{
+            img{
+                float: right;
+            }
+        }
+    }
+}
